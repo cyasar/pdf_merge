@@ -60,8 +60,9 @@ cover/
 # User specific data (History)
 history.json
 
-# Web page folder (optional, if you want only source code)
-# web_sayfasi/
+# Private / Local files
+WHATSAPP_DUYURU.txt
+web_sayfasi/
 
 # Virtual Environment
 venv/
