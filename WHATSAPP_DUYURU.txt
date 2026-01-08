@@ -1,0 +1,21 @@
+📢 *Akademik Portal PDF Birleştirme Yazılımı (Windows)*
+
+Değerli Hocalarım/Meslektaşlarım,
+
+Akademik çalışmalarımızda sıkça ihtiyaç duyduğumuz; farklı PDF dosyalarını veya taradığımız resimleri tek bir dosyada birleştirme işlemini pratik hale getirmek amacıyla bu yazılımı geliştirdim.
+
+🖥️ *Sistem:* Windows (Kurulum gerektirmez, indirip çalıştırabilirsiniz)
+
+🛠 *Öne Çıkan Özellikler:*
+✅ **PDF ve Resim Birleştirme:** Sadece PDF değil; JPG ve PNG resim dosyalarınızı da listeye ekleyip tek bir PDF haline getirebilirsiniz.
+✅ **Ön İzleme:** Dosyayı oluşturmadan önce sayfaların nasıl görüneceğini kontrol edebilirsiniz.
+✅ **Kolay Sıralama:** Sürükle-bırak mantığına yakın, yukarı/aşağı butonlarıyla sıralama yapabilirsiniz.
+✅ **Güvenli:** Tamamen internetsiz çalışır, verileriniz bilgisayarınızda kalır.
+
+Ekteki ".exe" dosyasını Windows bilgisayarınıza indirip doğrudan kullanabilirsiniz.
+
+Faydalı olması dileğiyle, iyi çalışmalar dilerim.
+
+👨‍💻 *Hazırlayan:*
+Dr. Cumali Yaşar
+Çanakkale Onsekiz Mart Üniversitesi - Enformatik Bölümü

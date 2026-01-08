@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazılımlar | Dr. Cumali Yaşar</title>
+    <meta name="description" content="Akademik çalışmalar ve verimlilik için geliştirilen ücretsiz yazılımlar.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* Koyu Lacivert */
+            --secondary-color: #34495e;
+            --accent-color: #3498db; /* Mavi */
+            --success-color: #27ae60; /* Yeşil */
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand i {
+            color: var(--accent-color);
+        }
+
+        .uni-info {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Software Grid */
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding-bottom: 60px;
+        }
+
+        .software-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border-top: 5px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .software-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .badge-new {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .icon-container i {
+            font-size: 30px;
+            color: var(--accent-color);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .card-text {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .features-list li i {
+            color: var(--success-color);
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+
+        .card-footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: var(--success-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .btn-download:hover {
+            background-color: #219150;
+        }
+
+        .os-info {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #777;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        Dr. Cumali Yaşar
+                        <div class="uni-info">Çanakkale Onsekiz Mart Üniversitesi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Yazılımlar ve Araçlar</h1>
+            <p>Akademik çalışmalarınızı kolaylaştırmak ve verimliliğinizi artırmak için geliştirdiğim ücretsiz yazılımlar.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="software-grid">
+            
+            <!-- Yazılım Kartı 1: PDF Birleştirici -->
+            <div class="software-card">
+                <span class="badge-new">GÜNCEL</span>
+                <div class="card-body">
+                    <div class="icon-container">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="card-title">Akademik Portal PDF Birleştirici</h3>
+                    <p class="card-text">
+                        Farklı PDF dosyalarını ve resimleri (JPG, PNG) tek bir dosyada birleştimenizi sağlayan pratik ve güvenli bir masaüstü aracı.
+                    </p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> PDF ve Resim birleştirme</li>
+                        <li><i class="fas fa-check"></i> Sürükle-bırak sıralama</li>
+                        <li><i class="fas fa-check"></i> Birleştirme öncesi ön izleme</li>
+                        <li><i class="fas fa-check"></i> %100 Güvenli (Offline çalışır)</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="AkademikPortalPDF.exe" class="btn-download" download>
+                        <i class="fab fa-windows"></i> İndir (Windows) v1.2
+                    </a>
+                    <div class="os-info">
+                        <i class="fas fa-info-circle"></i> Windows 10/11 Uyumlu
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gelecek Yazılımlar İçin Yer Tutucu (İstenirse Kaldırılabilir) -->
+            <div class="software-card" style="opacity: 0.7; border-top-color: #95a5a6;">
+                <div class="card-body">
+                    <div class="icon-container" style="background-color: #eee;">
+                        <i class="fas fa-code" style="color: #95a5a6;"></i>
+                    </div>
+                    <h3 class="card-title" style="color: #7f8c8d;">Çok Yakında</h3>
+                    <p class="card-text">
+                        Akademik verimlilik üzerine yeni araçlar geliştirilme aşamasındadır.
+                    </p>
+                </div>
+                <div class="card-footer">
+                   <button class="btn-download" style="background-color: #95a5a6; cursor: default;">Çok Yakında</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dr. Cumali Yaşar - Tüm Hakları Saklıdır.</p>
+            <p>Enformatik Bölümü | <a href="mailto:cumali.yasar@gmail.com">İletişim</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
